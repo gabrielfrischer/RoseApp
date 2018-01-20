@@ -26,6 +26,7 @@
     "react": "16.0.0",
     "react-native": "0.50.3",
     "react-native-easy-grid": "^0.1.16",
+    "react-native-elements": "^0.19.0",
     "react-native-highcharts": "^1.0.2",
     "react-native-pure-chart": "^0.0.14",
     "react-native-slider": "^0.11.0",

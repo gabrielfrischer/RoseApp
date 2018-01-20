@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
 import { Container, Header, Title, Content, Footer, Card, CardItem, Thumbnail, FooterTab, Button, Left, Right, Body, Icon, Text, H1, H2, H3, } from 'native-base';
 import {Font,LinearGradient} from 'expo';
-import { StyleSheet, Image, TouchableHighlight, View, Dimensions } from 'react-native';
+import { StyleSheet, Image, TouchableHighlight, View, Dimensions, ScrollView } from 'react-native';
 import moment from 'moment';
 import PieChart from './PieChart';
 import Slider from "react-native-slider"; // 0.11.0
 import { Col, Row, Grid } from "react-native-easy-grid";
+import HorizontalCards from './HorizontalCards';
 
 
 
@@ -72,7 +73,7 @@ this.state.fontLoaded ? (
 }
 {
   this.state.fontLoaded ? (
-    <Text style={{ fontFamily: 'comfortaaBold', fontSize: 22, color:'white' }}>
+    <Text style={{ fontFamily: 'comfortaaBold', fontSize: 18, color:'white' }}>
       Below are your weekly mobility trends
     </Text>
   ) : null
@@ -85,7 +86,10 @@ this.state.fontLoaded ? (
   ) : null
   }
           </Row>
-
+          <ScrollView>
+<HorizontalCards/>
+  </ScrollView>
+       
        <Card> 
           <View style={{height:100, justifyContent:'center'}}>
           <View style={styles.slider}>
