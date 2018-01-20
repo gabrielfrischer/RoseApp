@@ -49,7 +49,7 @@ const data = [
             <Card
               title={null}
               image={{ url: "http://via.placeholder.com/160x160" }}
-              containerStyle={{ padding: 0, width: Dimensions.get('window').width-32, borderRadius:15 }}
+              containerStyle={{ padding: 0, width: Dimensions.get('window').width-35, borderRadius:15 }}
             >
               <Text style={{ marginBottom: 10 }}>
                 hello

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Container, Header, Title, Content, Footer, Card, CardItem, Thumbnail, FooterTab, Button, Left, Right, Body, Icon, Text, H1, H2, H3, } from 'native-base';
 import {Font,LinearGradient} from 'expo';
-import { StyleSheet, Image, TouchableHighlight, View, Dimensions, ScrollView } from 'react-native';
+import { StyleSheet, Image, TouchableHighlight, View, Dimensions, ScrollView, FlatList } from 'react-native';
 import moment from 'moment';
 import PieChart from './PieChart';
 import Slider from "react-native-slider"; // 0.11.0
@@ -86,9 +86,9 @@ this.state.fontLoaded ? (
   ) : null
   }
           </Row>
-          <ScrollView>
-<HorizontalCards/>
-  </ScrollView>
+
+
+  <HorizontalCards/>
        
        <Card> 
           <View style={{height:100, justifyContent:'center'}}>
@@ -208,6 +208,7 @@ const styles = StyleSheet.create({
   },
   centerIt:{
     alignItems:'center',
+    flexDirection:'row'
   },
   slider: {
     flex: 1,
