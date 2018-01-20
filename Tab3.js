@@ -219,7 +219,7 @@ const styles = StyleSheet.create({
     borderColor:'#ffffff',
     backgroundColor: '#ffffff',
     marginTop:15,
-    marginRight:20,
+    marginLeft:20,
     borderWidth:3,
   },
   buttonBlockColInner: {
