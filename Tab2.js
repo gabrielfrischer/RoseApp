@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import { Container, Header, Title, Content, Footer, Card, CardItem, Thumbnail, FooterTab, Button, Left, Right, Body, Icon, Text, H1, H2, H3, } from 'native-base';
-import Font from 'expo';
-import { StyleSheet, Image, TouchableHighlight, View } from 'react-native';
+import {Font,LinearGradient} from 'expo';
+import { StyleSheet, Image, TouchableHighlight, View, Dimensions } from 'react-native';
 import moment from 'moment';
 import PieChart from './PieChart';
 import Slider from "react-native-slider"; // 0.11.0
-
+import { Col, Row, Grid } from "react-native-easy-grid";
 
 
 
@@ -15,7 +15,8 @@ export default class Tab2 extends Component {
 
     state={
       isReady: false,
-      value:0.2
+      value:0.2,
+      fontLoaded: false
     }
   
     async componentWillMount() {
@@ -26,6 +27,17 @@ export default class Tab2 extends Component {
     });
     this.setState({isReady:true})
   }
+
+  
+  async componentDidMount() {
+    await Font.loadAsync({
+      'comfortaa': require('./assets/fonts/Comfortaa-Regular.ttf'),
+      'comfortaaBold': require('./assets/fonts/Comfortaa-Bold.ttf'),
+    });
+
+    this.setState({ fontLoaded: true });
+  }
+    
     
   render() {
     if (!this.state.isReady) {
@@ -33,23 +45,48 @@ export default class Tab2 extends Component {
     }
     return (
       <Container>
-        <Header style={styles.headerPadding}>
-          <Left>
-            <Button transparent info>
-              <Icon name='menu' />
-            </Button>
-          </Left>
-          <Body>
-            <Title>Home</Title>
-          </Body>
-          <Right />
-        </Header>
         <Content>
-      <PieChart/>
-        <Text style={{fontSize:42, textAlign:'center'}}>Hello, Richard<Icon style={{ fontSize:30 }} name='md-happy'/></Text>
-        <Text style={{fontSize:22, textAlign:'center'}}>Below are your weekly stats</Text>
-        <Text style={{fontSize:12, textAlign:'center'}}>Last UPDATED: 2 minutes ago</Text>
-          <Card> 
+     {/* <PieChart/> */}
+
+      <Row style={styles.headerGradientBox}>
+          <LinearGradient
+          colors={['#b066fe', '#8aa4ff', '#63e2ff']}
+          style={{
+            position: 'absolute',
+            left: 0,
+            right: 0,
+            top: 0,
+            height: Dimensions.get('window').height,
+            width: Dimensions.get('window').width
+
+          }}>
+        </LinearGradient>
+        
+
+          {
+this.state.fontLoaded ? (
+  <Text style={{ fontFamily: 'comfortaaBold', fontSize: 40, color:'white' }}>
+    Hello, Richard
+  </Text>
+) : null
+}
+{
+  this.state.fontLoaded ? (
+    <Text style={{ fontFamily: 'comfortaaBold', fontSize: 22, color:'white' }}>
+      Below are your weekly mobility trends
+    </Text>
+  ) : null
+  }
+  {
+  this.state.fontLoaded ? (
+    <Text style={{ fontFamily: 'comfortaaBold', fontSize: 10, color:'white' }}>
+      LAST UPDATED: 2 minutes ago
+    </Text>
+  ) : null
+  }
+          </Row>
+
+       <Card> 
           <View style={{height:100, justifyContent:'center'}}>
           <View style={styles.slider}>
         <Slider
@@ -174,6 +211,18 @@ const styles = StyleSheet.create({
     marginRight: 10,
     alignItems: "stretch",
     justifyContent: "center"
-  }
+  },
+  headerGradientBox:{
+    height: 250,
+    width: Dimensions.get('window').width,
+    alignItems: 'flex-start', 
+    justifyContent: 'center',
+    flexDirection:'column'
+  },
+  leftCenterGradientText: {
+    fontSize:46,
+    color:'white',
+
+  },
 });
 
