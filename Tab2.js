@@ -56,7 +56,7 @@ export default class Tab2 extends Component {
             left: 0,
             right: 0,
             top: 0,
-            height: Dimensions.get('window').height,
+            height: 300,
             width: Dimensions.get('window').width
 
           }}>
@@ -213,7 +213,7 @@ const styles = StyleSheet.create({
     justifyContent: "center"
   },
   headerGradientBox:{
-    height: 250,
+    height: 300,
     width: Dimensions.get('window').width,
     alignItems: 'flex-start', 
     justifyContent: 'center',
