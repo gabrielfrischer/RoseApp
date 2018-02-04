@@ -41,18 +41,30 @@ export default class Login extends Component {
 
 <Form style={{backgroundColor:'#fff'}}>
             <Item floatingLabel>
-              <Label>Email</Label>
+              <Label>Subject Name/ID</Label>
+              <Input />
+            </Item>
+            <Item floatingLabel>
+              <Label>Subject Age</Label>
+              <Input />
+            </Item>
+            <Item floatingLabel>
+              <Label>Subject Height</Label>
+              <Input />
+            </Item>
+            <Item floatingLabel>
+              <Label>Subject Weight</Label>
               <Input />
             </Item>
             <Item floatingLabel last>
-              <Label>Password</Label>
+              <Label>Optional Notes</Label>
               <Input />
             </Item>
             <Text>{"\n"}</Text>
             <Button primary full large onPress={() => {
-              this.props.navigation.navigate("Graphs1")
+              this.props.navigation.navigate("Step1")
           }} >
-            <Text>Login</Text>
+            <Text>Begin FAB Test</Text>
           </Button>
             
           </Form>

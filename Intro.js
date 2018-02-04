@@ -69,7 +69,7 @@ this.state.fontLoaded ? (
 {
 this.state.fontLoaded ? (
   <Text style={{ fontFamily: 'comfortaa', fontSize: 20, color:'white' }}>
-    Your Personal Balance Assistant
+    Dr. Rose App
   </Text>
 ) : null
 }
@@ -85,17 +85,9 @@ this.state.fontLoaded ? (
 <Col style={styles.buttonBlockCol}>
 <Button primary block onPress={() => {
             this.props.navigation.navigate("Login")
-          }}><Text>Login</Text></Button>
+          }}><Text>Start</Text></Button>
           <Row style={{ height:10 }}>
 </Row>
-<Button block light onPress={() => {
-            this.props.navigation.navigate("CreateAccount")
-          }}><Text>Create Account</Text></Button><Row style={{ height:10 }}>
-          </Row>
-
-    <Button block light transparent onPress={() => {
-            this.props.navigation.navigate("Purchase")
-          }}><Text>Don't have a Libra?</Text></Button>
  </Col>
 </Row>
 

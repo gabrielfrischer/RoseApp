@@ -4,10 +4,20 @@ import Intro from './Intro.js';
 import Login from './Login';
 import CreateAccount from './CreateAccount';
 import Purchase from './Purchase';
-import Graphs1 from './Graphs1';
+import Step1 from './Step1';
 import Balance from './Balance';
 import Strength from './Strength';
 import Mobility from './Mobility';
+import Step2 from './Step2';
+import Step3 from './Step3';
+import Step4 from './Step4';
+import Step5 from './Step5';
+import Step6 from './Step6';
+import Step7 from './Step7';
+import Step8 from './Step8';
+import Step9 from './Step9';
+import Step10 from './Step10';
+import Summary from './Summary';
 
 
 
@@ -21,7 +31,7 @@ const RootNavigator = StackNavigator({
   Login: {
     screen: Login,
     navigationOptions: {
-        headerTitle: 'Login',
+        headerTitle: 'Subject User Input',
       },
   },
   CreateAccount: {
@@ -36,8 +46,68 @@ const RootNavigator = StackNavigator({
         headerTitle: 'Purchase your Libra',
       },
   },
-  Graphs1: {
-    screen: Graphs1,
+  Step1: {
+    screen: Step1,
+    navigationOptions: {
+      header: null
+    },
+  },
+  Step2: {
+    screen: Step2,
+    navigationOptions: {
+      header: null
+    },
+  },
+  Step3: {
+    screen: Step3,
+    navigationOptions: {
+      header: null
+    },
+  },
+  Step4: {
+    screen: Step4,
+    navigationOptions: {
+      header: null
+    },
+  },
+  Step5: {
+    screen: Step5,
+    navigationOptions: {
+      header: null
+    },
+  },
+  Step6: {
+    screen: Step6,
+    navigationOptions: {
+      header: null
+    },
+  },
+  Step7: {
+    screen: Step7,
+    navigationOptions: {
+      header: null
+    },
+  },
+  Step8: {
+    screen: Step8,
+    navigationOptions: {
+      header: null
+    },
+  },
+  Step9: {
+    screen: Step9,
+    navigationOptions: {
+      header: null
+    },
+  },
+  Step10: {
+    screen: Step10,
+    navigationOptions: {
+      header: null
+    },
+  },
+  Summary: {
+    screen: Summary,
     navigationOptions: {
       header: null
     },

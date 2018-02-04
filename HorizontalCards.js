@@ -63,4 +63,4 @@ const data = [
   }
 }
 
-export default HorizontalCards;
+//export default HorizontalCards;
