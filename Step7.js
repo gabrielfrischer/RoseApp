@@ -6,7 +6,7 @@ import moment from 'moment';
 //import PieChart from './PieChart';
 import Slider from "react-native-slider"; // 0.11.0
 import { Col, Row, Grid } from "react-native-easy-grid";
-import StopWatch from "./StopWatch";
+import StopWatch from "./StopWatchStep7";
 
 
 
