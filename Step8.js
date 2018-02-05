@@ -79,7 +79,7 @@ this.state.fontLoaded ? (
 }
 {
   this.state.fontLoaded ? (
-    <Text style={{ fontFamily: 'comfortaaBold', fontSize: 18, color:'white' }}>
+    <Text style={{ fontFamily: 'comfortaaBold', fontSize: 18, color:'white', textAlign:'center' }}>
       Figure 8 Walk
     </Text>
   ) : null
@@ -149,7 +149,7 @@ const styles = StyleSheet.create({
   headerGradientBox:{
     height: Dimensions.get('window').height/3,
     width: Dimensions.get('window').width,
-    alignItems: 'flex-start', 
+    alignItems: 'center', 
     justifyContent: 'center',
     flexDirection:'column'
   },

@@ -6,6 +6,7 @@ import moment from 'moment';
 //import PieChart from './PieChart';
 import Slider from "react-native-slider"; // 0.11.0
 import { Col, Row, Grid } from "react-native-easy-grid";
+import Counter from "./CounterStep2";
 
 
 
@@ -79,7 +80,7 @@ this.state.fontLoaded ? (
 }
 {
   this.state.fontLoaded ? (
-    <Text style={{ fontFamily: 'comfortaaBold', fontSize: 18, color:'white' }}>
+    <Text style={{ fontFamily: 'comfortaaBold', fontSize: 18, color:'white', textAlign:'center' }}>
       Turn 360 degrees in right and left directions
     </Text>
   ) : null
@@ -109,6 +110,8 @@ this.state.fontLoaded ? (
               <Item label="Assign Score of 4" value="key4" />
             </Picker>
           </Form>
+
+          <Counter/>
         </Content>
         <Footer>
           <FooterTab>
@@ -149,7 +152,7 @@ const styles = StyleSheet.create({
   headerGradientBox:{
     height: Dimensions.get('window').height/3,
     width: Dimensions.get('window').width,
-    alignItems: 'flex-start', 
+    alignItems: 'center', 
     justifyContent: 'center',
     flexDirection:'column'
   },

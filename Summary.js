@@ -63,7 +63,7 @@ export default class Summary extends Component {
             left: 0,
             right: 0,
             top: 0,
-            height: Dimensions.get('window').height/5,
+            height: Dimensions.get('window').height/3,
             width: Dimensions.get('window').width
 
           }}>
@@ -101,7 +101,7 @@ this.state.fontLoaded ? (
           <FooterTab>
           <Button vertical full>
           <Icon name="ios-return-right-outline" />
-          <Text>Continue to Step 2</Text>
+          <Text>Finish Test and Upload Data</Text>
         </Button>
           </FooterTab>
         </Footer>
@@ -134,7 +134,7 @@ const styles = StyleSheet.create({
   headerGradientBox:{
     height: Dimensions.get('window').height/3,
     width: Dimensions.get('window').width,
-    alignItems: 'flex-start', 
+    alignItems: 'center', 
     justifyContent: 'center',
     flexDirection:'column'
   },
